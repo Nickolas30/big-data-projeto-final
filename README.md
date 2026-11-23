@@ -78,5 +78,5 @@ README.md
 4. No Looker Studio, conectar ao BigQuery e usar a tabela `projeto_final.resumo_diario`.
 
 ## Links
-- Painel no Looker Studio (somente leitura): [colar o link]
+- Painel no Looker Studio (somente leitura): https://datastudio.google.com/s/jn8yHcTlZsU 
 - Relatório (PDF): [colar o link ou caminho]
