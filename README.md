@@ -5,7 +5,7 @@ Análise das corridas de táxi amarelo de Nova York (2016) com BigQuery e Looker
 Disciplina: Big Data | Curso: Análise e Desenvolvimento de Sistemas
 
 ## Integrantes
-- Anyta da Silva queiroz
+- Anyta da Silva Queiroz
 - Jamylle da Silva Santana
 - Maria Biatriz Ramos Rodrigues
 - Nickolas Eduardo Gonçalves de Oliveira
