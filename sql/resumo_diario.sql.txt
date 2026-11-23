@@ -1,0 +1,25 @@
+CREATE SCHEMA IF NOT EXISTS `SEU_PROJETO.projeto_final`
+OPTIONS (location = 'US');
+
+CREATE OR REPLACE TABLE `SEU_PROJETO.projeto_final.resumo_diario` AS
+WITH diario AS (
+  SELECT DATE(pickup_datetime) AS dia,
+         COUNT(*) AS corridas,
+         ROUND(AVG(fare_amount), 2) AS tarifa_media
+  FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
+  WHERE fare_amount > 0
+  GROUP BY dia
+),
+base AS (
+  SELECT *,
+         AVG(corridas) OVER () AS media,
+         AVG(corridas) OVER (ORDER BY dia
+           ROWS BETWEEN 7 PRECEDING AND 1 PRECEDING) AS previsao
+  FROM diario
+)
+SELECT dia, corridas, tarifa_media,
+       ROUND(previsao) AS previsao,
+       CASE WHEN corridas > 1.25 * media THEN 'REFORCAR FROTA'
+            WHEN corridas < 0.5 * media THEN 'REDUZIR FROTA'
+            ELSE 'MANTER' END AS acao
+FROM base
