@@ -2,17 +2,6 @@
 
 Análise das corridas de táxi amarelo de Nova York (2016) com BigQuery e Looker Studio (Trilha A).
 
-## Integrantes
-- Anyta da Silva queiroz
-- Maria Biatriz Ramos Rodrigues
-- Nickolas Eduardo Gonçalves de Oliveira
-- Nicolas Carneiro de Lima
-- Jamylle da Silva Santana
-
-# Projeto Final de Big Data - UNINASSAU
-
-Análise das corridas de táxi amarelo de Nova York (2016) com BigQuery e Looker Studio (Trilha A).
-
 Disciplina: Big Data | Curso: Análise e Desenvolvimento de Sistemas
 
 ## Integrantes
